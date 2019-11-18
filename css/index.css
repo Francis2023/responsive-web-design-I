@@ -74,6 +74,10 @@ h1, h2, h3, h4, h5 {
 	padding: 5px;
 	border: 5px;
 }
+.navigation nav .a{
+	text-decoration: none;
+	color:black;
+}
 nav{
 	text-align: left;
 	display: inline-block;
@@ -193,6 +197,7 @@ h3{
 	margin: 5px;
 }
 .contact{
+	
 	width: auto;
 	height: 200px;
 	text-align: left;
@@ -204,12 +209,15 @@ h3{
 	margin:10px 0px 10px 0px;
 
 }
-.address{
+.contact address .address{
 	margin: 0px 0px 10px 0px;
-
+    text-decoration: none;
+	
 }
 .number{
 	margin: 0px 0px 10px 0px;
+	text-decoration: none;
+	color:black;
 }
 .email{
 	margin: 0px 0px 10px 0px;
@@ -221,6 +229,7 @@ h3{
 }
 
 body{
+	
 	width: 1260px;
     margin: 0 auto;
     background: gray;
@@ -228,29 +237,43 @@ body{
 
 /* tablet Screen */
 
-@media(max-width: 960px ){
+@media(max-width: 800px ){
 
 body{
-
-    width: 960px;
-    background: black;
-    color: white;
+    background: skyblue;
+    width: 800px;
+    color: black;
     margin: 0 auto;
 }
 
 .head h1 .title{
     display:flex;
-    justify-content: center;        
+	justify-content: center;  
+	margin-top: 10px;      
 }
+.navigation{
+	display:flex;
+	flex-direction: column-reverse;
+	justify-content: center;
+	align-items: center;
+}
+.navigation .logo{
+	
+	width:200px;
+	margin-bottom: 20px;
+	margin-top: 30px;
+}    
+.navigation nav .a {
+	color: black;
+    text-decoration: none;
+}
+.head .h1 .button{
 
-    
-
-.head h1 .button{
     border: 3px solid white;
 }
-nav{
+.navigation nav{
     display: flex;
-    width: auto;
+    width: 730px;
     justify-content: space-between;
     margin-right: 10px;
 }
@@ -259,7 +282,8 @@ nav{
 
     display: flex;
     width: 100%;
-    justify-content: center;
+	justify-content: center;
+	margin-bottom: 30px;
 }
 .headImg{
     display: none;
@@ -282,12 +306,42 @@ nav{
     }
     
     .navigation{
-        display: flex;
+		
+		display: flex;
         align-items: center;
-        flex-direction: column;
-        justify-content: center;
+        flex-direction: column-reverse;
+		justify-content: center;
+		margin-bottom: 60px;
     }
-   
+	.navigation nav{
+		display: flex;
+		flex-direction: column;
+		width: 450px ;
+		justify-content: center;
+		align-items: center;
+		margin-top: 20px;
+        
+	}
+	.navigation nav .a {
+		   text-align: center;
+		   color: gray;
+		   text-decoration: none;
+		   width: 100%;
+		   margin-top: 5px;
+		   margin-bottom: 5px;
+		   border-bottom: 1px solid black;
+		   padding: 5px;
+	}
+	.navigation nav .a:first-child{
+		border-top: 1px solid black;
+	}
+	.navigation .logo{
+	    
+		width:160px;
+		margin-bottom: 90px;
+		margin-top: 100px;
+	}    
+	
     .head{
 
         display: flex;
@@ -295,19 +349,26 @@ nav{
          height: 500px;
          width: 500px;
          justify-items: center; 
-         margin-right: 40px;
+		 margin-right: 40px;
+		 margin-bottom: 30px;
     }
     .head .h1{
+		
+		font-size: 80px;
+		text-align: center;
+		margin-top: 190px;
+		padding: 10px;
         width: 400px;
     }
-    .head .h1 .title{
-        
-    }
+    
     .head .h1 .button{
         display:flex;
         justify-content: center;
         margin-left: 140px;
-    }
+	}
+	.head .h1 .title{
+		width: 400px;
+	}
     p{
         width: 474px;
     }
@@ -337,18 +398,5 @@ nav{
         flex-direction: column;
         margin-left: 20px;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }
